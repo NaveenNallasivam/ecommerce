@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import SignUp from "./signUp";
-import Login from "./login";
 import About from "../about";
 import Contact from "../contact";
 import OauthLogin from "./oauth/oauthLogin";
@@ -73,6 +72,10 @@ const AuthRoot = () => {
 
       />
     );
+  }
+
+  if(users.length===0){
+    return <div>Loading..</div>
   }
 
   return (
